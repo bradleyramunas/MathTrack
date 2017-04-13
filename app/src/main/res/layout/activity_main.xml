@@ -7,6 +7,7 @@
     tools:context="com.bradleyramunas.mathtrack.MainActivity">
     
     <android.support.v7.widget.Toolbar
+        android:theme="@style/ToolbarText"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"

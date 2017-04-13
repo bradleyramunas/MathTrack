@@ -2,6 +2,7 @@ package com.bradleyramunas.mathtrack;
 
 
 import android.app.Application;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
@@ -25,12 +26,24 @@ public class MathTrack extends Application {
         Colorful.init(this);
     }
 
-    public void ChangeColor(Colorful.ThemeColor themeColor) {
+    public void ChangeColor(Colorful.ThemeColor themeColor, Intent callingIntent) {
         Colorful.config(this)
                 .primaryColor(themeColor)
                 .accentColor(themeColor)
-                .dark(false)
                 .apply();
-        ProcessPhoenix.triggerRebirth(this);
+        ProcessPhoenix.triggerRebirth(this, callingIntent);
+    }
+
+    public void EnableDarkMode(boolean enable, Intent callingIntent){
+        if(enable){
+            Colorful.config(this)
+                    .dark(true)
+                    .apply();
+        }else{
+            Colorful.config(this)
+                    .dark(false)
+                    .apply();
+        }
+        ProcessPhoenix.triggerRebirth(this, callingIntent);
     }
 }

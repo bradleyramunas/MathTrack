@@ -1,5 +1,6 @@
 package com.bradleyramunas.mathtrack;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -35,24 +36,15 @@ public class MainActivity extends CActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.settings){
-            ColorPickerDialog dialog = new ColorPickerDialog(this);
-            dialog.setOnColorSelectedListener(new ColorPickerDialog.OnColorSelectedListener() {
-                @Override
-                public void onColorSelected(Colorful.ThemeColor themeColor) {
-                    changeColor(themeColor);
-                }
-            });
-            dialog.show();
+            Intent callingIntent = new Intent(this, SettingsActivity.class);
+            this.startActivity(callingIntent);
             return true;
         }
 
         return false;
     }
 
-    public void changeColor(Colorful.ThemeColor themeColor){
-        MathTrack mathTrack = (MathTrack) getApplicationContext();
-        mathTrack.ChangeColor(themeColor);
-    }
+
 
 
 }

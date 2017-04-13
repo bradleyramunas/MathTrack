@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ToolbarText">
+        <item name="android:textColorPrimary">@color/lightWhite</item>
+        <item name="android:actionMenuTextColor">@color/lightBlack</item>
+        <item name="android:textColorSecondary">@color/lightWhite</item>
+        <item name="android:actionBarWidgetTheme">@style/MenuStyle</item>
+        <item name="android:itemTextAppearance">@style/MenuStyle</item>
+    </style>
+
+    <style name="MenuStyle">
+        <item name="android:textColor">@color/lightBlack</item>
+    </style>
+
 </resources>

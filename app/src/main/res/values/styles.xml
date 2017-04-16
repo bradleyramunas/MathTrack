@@ -17,7 +17,7 @@
     </style>
 
     <style name="MenuStyle">
-        <item name="android:textColor">@color/lightBlack</item>
+        <item name="android:textColor">?attr/colorPrimaryDark</item>
     </style>
 
 </resources>
